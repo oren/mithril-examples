@@ -16,6 +16,13 @@ An app have modules (module = part of a page).
 module have 3 layers: Model, Controller and View.
 module have two functions: controller and view and it also stores some data.
 
+```js
+var loginModule = {
+  controller: function() {},
+  view: function() {}
+}
+```
+
 ### model
 * encapsulate business logic
 * can be easily shared between modules, controllers.
