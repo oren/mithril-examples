@@ -1,0 +1,14 @@
+{
+  "name": "mithril-examples",
+  "version": "1.0.0",
+  "description": "## Getting statred - http://lhorie.github.io/mithril/getting-started.html",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mithril": "^0.1.28"
+  }
+}
