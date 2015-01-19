@@ -1,0 +1,110 @@
+bhtml, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body {
+	background-color: white;
+}
+
+header {
+	display: flex;	
+}
+
+.gap1{
+	flex: 3;
+}
+
+.post{
+	text-decoration: none;
+	background-color: #FF99FF;
+	font-size: 30px
+	justify-content: flex-end;
+}
+
+.hamburger{
+	justify-content: flex-end;
+	padding: 10px;
+	padding-left: 30px;
+}
+
+.image{
+	padding: 10px;
+	padding-left: 25px;
+}
+main {
+	display: flex;
+	background-color: white;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+
+.motorlarge {
+	padding-left: 50px;
+	padding-bottom: 10px
+}
+
+.title {
+	padding-left: 50px;
+	font-weight: bold;
+}
+
+.price{
+	padding-left: 100px;
+	font-weight: bolder;
+}
+
+.location{
+	padding-left: 50px;
+	font-style: italic;
+	font-size: small;
+}
+
+.description{
+	padding: 10px 20px 0px 50px;
+}
+
+footer{
+	display: flex;
+	align-items: right;
+}
+
+.contact{
+	padding-left: 275px;
+	text-decoration: none;
+}
+
+.text1{
+	padding-left: 20px;
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+
+text2{
+	padding-left: 20px;
+	font-weight: bold;
+}
+
+.submit{
+	padding-left: 275px;
+	text-decoration: none;
+}
+
