@@ -7,10 +7,6 @@ var post = require('./post.js');
 
 var main = document.querySelector('main');
 
-console.log(item);
-console.log(post);
-
-m.route.mode = "hash";
 m.route(main, "/", {
   "/": itemList,
   "/item": item,

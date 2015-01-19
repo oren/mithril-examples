@@ -1,5 +1,6 @@
 {
   "name": "pinkumarket",
+  "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,10 +14,6 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "browserify": "^8.1.1",
-    "mithril": "^0.1.28"
-  },
   "devDependencies": {
     "browserify": "^8.1.1",
     "mithril": "^0.1.28",
