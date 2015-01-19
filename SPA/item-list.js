@@ -35,7 +35,7 @@ itemList.controller = function() {
 itemList.view = function() {
   var tmpLinks = links.map(function (link) {
     var image = m("img.image", {src: link.src});
-    return m("a", {href: link.url}, image)
+    return m("a", {href: link.url, config: m.route}, image)
   })
 
   return m("div", tmpLinks);

@@ -7,6 +7,7 @@ var post = require('./post.js');
 
 var main = document.querySelector('main');
 
+m.route.mode = 'pathname';
 m.route(main, "/", {
   "/": itemList,
   "/item": item,

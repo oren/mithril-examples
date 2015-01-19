@@ -11,7 +11,7 @@ menu.controller = function() {
 menu.view = function() {
   return m("div", [
     m("p.gap1"),
-    m("a.post", {href: "/post"}, "Post"),
+    m("a.post", {href: "/post", config: m.route}, "Post"),
     m("img.humburger", {src: "images/hamburger.png"})
   ]);
 };
