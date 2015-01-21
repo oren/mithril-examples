@@ -1,0 +1,27 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'run', 'bundle-js' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.35
+4 verbose node symlink /usr/bin/node
+5 verbose run-script [ 'prebundle-js', 'bundle-js', 'postbundle-js' ]
+6 info prebundle-js pinkumarket@1.0.0
+7 info bundle-js pinkumarket@1.0.0
+8 verbose unsafe-perm in lifecycle true
+9 info pinkumarket@1.0.0 Failed to exec bundle-js script
+10 error pinkumarket@1.0.0 bundle-js: `browserify ./static/main.js > bundle.js`
+10 error Exit status 1
+11 error Failed at the pinkumarket@1.0.0 bundle-js script.
+11 error This is most likely a problem with the pinkumarket package,
+11 error not with npm itself.
+11 error Tell the author that this fails on your system:
+11 error     browserify ./static/main.js > bundle.js
+11 error You can get their info via:
+11 error     npm owner ls pinkumarket
+11 error There is likely additional logging output above.
+12 error System Linux 3.16.0-28-generic
+13 error command "/usr/bin/node" "/usr/bin/npm" "run" "bundle-js"
+14 error cwd /go/src/app
+15 error node -v v0.10.35
+16 error npm -v 1.4.28
+17 error code ELIFECYCLE
+18 verbose exit [ 1, true ]

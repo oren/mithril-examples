@@ -9,8 +9,8 @@
     "server": "node app/index.js",
     "bundle-css": "./node_modules/.bin/stylus ./app/styles/index.styl -o ./app/assets/css",
     "watch-css": "./node_modules/.bin/stylus -w ./app/styles -o ./app/assets/css",
-    "bundle-js": "./node_modules/.bin/browserify ./main.js > bundle.js",
-    "watch-js": "./node_modules/.bin/watchify ./main.js -o ./bundle.js"
+    "bundle-js": "./node_modules/.bin/browserify ./main.js > ./static/bundle.js",
+    "watch-js": "./node_modules/.bin/watchify ./main.js -o ./static/bundle.js"
   },
   "author": "",
   "license": "ISC",
