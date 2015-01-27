@@ -10,6 +10,7 @@ var app = {
 };
 
 var topline = require('./components/topline.js')(app);
+console.log('topline', topline);
 
 var man = {
     vm: {
@@ -17,6 +18,7 @@ var man = {
 
     controller: function() {
         this.topline = submodule(topline);
+        console.log('this.topline', this.topline);
     },
 
     view: function(c) {
