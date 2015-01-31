@@ -34,7 +34,7 @@ module.exports = function(man) {
             };
 
             return [
-                m('#pagisto-cms-topline', [
+                m('#foo', [
                     m('a.toggle-menu', {
                         onclick: c.toggleMenu
                     }, 'Toggle'),
