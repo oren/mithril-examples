@@ -29,4 +29,4 @@ var man = {
 };
 
 m.route.mode = 'search';
-m.module(document.getElementById('pagisto-cms'), man);
+m.module(document.getElementById('main'), man);
