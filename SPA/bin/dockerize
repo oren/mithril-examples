@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# build nginx and node images and run their containers
+
+ln -sf docker/nginx-dockerfile Dockerfile
+docker build -t nginx-app1 .
+docker run --name nginx-app1 -p 80:80 -v $(pwd):/user/share/nginx/html -d nginx-app1
+
+ln -sf docker/node-dockerfile Dockerfile
+docker build -t node-app1 .
+docker run --rm -it -p 3000:3000 -v $(pwd):/home/developer node-app1 /bin/bash

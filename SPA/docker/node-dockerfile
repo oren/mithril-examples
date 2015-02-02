@@ -1,0 +1,7 @@
+FROM node:0.10
+RUN useradd -ms /bin/bash developer
+RUN npm install -g jshint jscs morkdown
+WORKDIR /home/developer
+USER developer
+
+
