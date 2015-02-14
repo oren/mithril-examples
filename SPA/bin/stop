@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker stop app1 
+docker stop app1-nginx

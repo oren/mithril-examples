@@ -1,14 +1,8 @@
 #!/bin/bash
 
-# build nginx and node images and run their containers
-
 # Reset all variables that might be set
 file=
 verbose=0
-
-show_help () {
-  echo Build nginx and node images and run their containers
-}
 
 while [ "$#" -gt 0 ]; do
     case $1 in
@@ -50,20 +44,12 @@ while [ "$#" -gt 0 ]; do
     shift
 done
 
+# Suppose --file is a required option. Check that it has been set.
+if [ ! "$file" ]; then
+    echo 'ERROR: option "--file FILE" not given. See --help.' >&2
+    exit 1
+fi
+
 # Rest of the program here.
 # If there are input files (for example) that follow the options, they
 # will remain in the "$@" positional parameters.
-
-if [ "$verbose" == 1 ]; then
-  echo verbose
-else
-  echo quite
-fi
-
-ln -sf docker/nginx-dockerfile Dockerfile
-docker build -t app1-nginx .
-docker run --name app1-nginx -p 80:80 -v $(pwd):/user/share/nginx/html -d app1-nginx
-
-ln -sf docker/node-dockerfile Dockerfile
-docker build -t app1 .
-docker run --name app1 -it -p 3000:3000 -v $(pwd):/home/developer app1 /bin/bash

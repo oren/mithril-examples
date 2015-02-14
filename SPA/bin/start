@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker start app1 
+docker start app1-nginx

@@ -1,4 +1,4 @@
 #!/bin/bash
 
-# run the node container
-docker run --rm -it -p 3000:3000 -v $(pwd):/home/developer node-app1 /bin/bash
+docker run --name app1-nginx -p 80:80 -v $(pwd):/user/share/nginx/html -d app1-nginx
+docker run --name app1 -it -p 3000:3000 -v $(pwd):/home/developer app1 /bin/bash
