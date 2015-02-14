@@ -1,6 +1,6 @@
 FROM node:0.10
 RUN useradd -ms /bin/bash developer
-RUN npm install -g jshint jscs morkdown
+RUN npm install -g jshint jscs
 WORKDIR /home/developer
 USER developer
 
