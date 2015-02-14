@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# reload nginx
+
+# Reset all variables that might be set
+file=
+verbose=0
+
+show_help () {
+  echo restart nginx
+}
+
+while [ "$#" -gt 0 ]; do
+    case $1 in
+        -h|-\?|--help)   # Call a "show_help" function to display a synopsis, then exit.
+            show_help
+            exit
+            ;;
+        -v|--verbose)
+            verbose=$((verbose + 1)) # Each -v argument adds 1 to verbosity.
+            ;;
+        --)              # End of all options.
+            shift
+            break
+            ;;
+        -?*)
+            printf 'WARN: Unknown option (ignored): %s\n' "$1" >&2
+            ;;
+        *)               # Default case: If no more options then break out of the loop.
+            break
+    esac
+
+    shift
+done
+
+# Rest of the program here.
+# If there are input files (for example) that follow the options, they
+# will remain in the "$@" positional parameters.
+
+if [ "$verbose" == 1 ]; then
+  echo verbose mode
+else
+  echo 
+fi
+
+docker exec app1-nginx service nginx restart
