@@ -2,6 +2,10 @@
 
 # build nginx and node images and run their containers
 
+red=`tput setaf 1`
+green=`tput setaf 2`
+reset=`tput sgr0`
+
 # Reset all variables that might be set
 file=
 verbose=0
@@ -62,8 +66,10 @@ fi
 
 ln -sf docker/nginx-dockerfile Dockerfile
 docker build -t app1-nginx .
-docker run --name app1-nginx -p 80:80 -v $(pwd):/user/share/nginx/html -d app1-nginx
+docker run --name app1-nginx -p 80:80 -v $(pwd):/usr/share/nginx/html -d app1-nginx
+echo "${green}app1-nginx is running in the background${reset}"
 
 ln -sf docker/node-dockerfile Dockerfile
 docker build -t app1 .
 docker run --name app1 -it -p 3000:3000 -v $(pwd):/home/developer app1 /bin/bash
+echo "${green}app1 is running in the background${reset}"
